@@ -19,7 +19,7 @@ library(here)
 set.seed(123)
 
 # load data
-lc <- loadRDS(here("output"), lc.RDS)
+lc <- loadRDS("lc.rds", here("output"))
 
 trainMe <- createDataPartition(lc$default, p=0.7, list=FALSE, times=1)
 lc_train <- lc[trainMe, ]
